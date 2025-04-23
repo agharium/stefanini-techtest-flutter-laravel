@@ -56,6 +56,11 @@ http://127.0.0.1:9000
 <img src="https://github.com/user-attachments/assets/eade328d-b466-46d5-8c98-6197260f37cf" width="300"/>
 
 
+### Nota
+
+Caso seja usuário Windows, basta executar o arquivo ```start.bat``` que o Docker será montado e executado automaticamente.
+
+
 ## 🧑 Autor
 
 Desenvolvido por [José Paulo](https://www.linkedin.com/in/jose-paulo-oliveira-filho/).
