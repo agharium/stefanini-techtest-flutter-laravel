@@ -32,6 +32,7 @@ docker-compose exec app php artisan key:generate
 
 # Rodar as migrations e seeders
 docker-compose exec app php artisan migrate --seed
+```
 
 ## 🧑 Autor
 
