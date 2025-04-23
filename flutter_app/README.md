@@ -27,6 +27,10 @@ flutter pub get
 flutter run
 ```
 
+### Nota
+
+Caso seja usuário Windows, basta executar o arquivo ```start.bat``` que o Docker será montado e executado automaticamente.
+
 ## 🚀 Rodar o projeto web com Docker
 
 ```bash
@@ -54,11 +58,6 @@ http://127.0.0.1:9000
 #### Tela de detalhes
 
 <img src="https://github.com/user-attachments/assets/eade328d-b466-46d5-8c98-6197260f37cf" width="300"/>
-
-
-### Nota
-
-Caso seja usuário Windows, basta executar o arquivo ```start.bat``` que o Docker será montado e executado automaticamente.
 
 
 ## 🧑 Autor
