@@ -27,6 +27,19 @@ flutter pub get
 flutter run
 ```
 
+## 🚀 Rodar o projeto web com Docker
+
+```bash
+# Construa a imagem docker
+docker-compose build
+
+# Suba o container
+docker-compose up -d
+
+# Acesse pelo navegador
+http://127.0.0.1:9000
+```
+
 ## 📸 Telas
 
 #### Listagem de usuários
