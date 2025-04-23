@@ -3,10 +3,12 @@ import 'package:flutter_app/helpers/listable.dart';
 
 class ListCellWidget<T extends Listable> extends StatefulWidget {
   final T item;
+  final Function()? onTap;
 
   const ListCellWidget({
     super.key,
     required this.item,
+    this.onTap,
   });
 
   @override
@@ -27,6 +29,7 @@ class _ListCellWidgetState extends State<ListCellWidget> {
           ],
         ),
       ),
+      onTap: widget.onTap ?? () {},
     );
   }
 }

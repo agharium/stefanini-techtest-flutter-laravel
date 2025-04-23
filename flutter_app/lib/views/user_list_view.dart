@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/views/user_detail_view.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter_app/widgets/list_cell_widget.dart';
 import 'package:flutter_app/services/user_provider.dart';
@@ -49,7 +50,16 @@ class _UserListViewState extends State<UserListView> {
               itemCount: users.length,
               itemBuilder: (context, index) =>
                 ListCellWidget(
-                  item: users[index]
+                  item: users[index],
+                  onTap: () =>
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (_) => UserDetailView(
+                          userId: users[index].id!
+                        ),
+                      ),
+                    )
                 ),
             );
           }

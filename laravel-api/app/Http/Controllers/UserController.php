@@ -12,7 +12,7 @@ class UserController extends Controller
      */
     public function index()
     {
-        $users = User::orderBy('id', 'desc')->get();
+        $users = User::select('id', 'name', 'email')->orderBy('id', 'desc')->get();
 
         return response()->json($users);
     }
