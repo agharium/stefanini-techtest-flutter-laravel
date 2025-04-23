@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/views/add_user.dart';
 import 'package:flutter_app/views/user_detail_view.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter_app/widgets/list_cell_widget.dart';
@@ -64,6 +65,20 @@ class _UserListViewState extends State<UserListView> {
             );
           }
         },
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () async {
+          final created = await Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => const AddUserView()),
+          );
+
+          if (created == true) {
+            userProvider.fetchUsers();
+          }
+        },
+        backgroundColor: Colors.blue,
+        child: const Icon(Icons.add, color: Colors.white),
       ),
     );
   }

@@ -48,6 +48,7 @@ class _UserDetailViewState extends State<UserDetailView> {
       appBar: AppBar(
         title: const Text('Detalhes do Usuário'),
         backgroundColor: Colors.black,
+        iconTheme: const IconThemeData(color: Colors.white),
         titleTextStyle: const TextStyle(color: Colors.white, fontSize: 20),
       ),
       body: Padding(
