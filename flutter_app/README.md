@@ -27,10 +27,6 @@ flutter pub get
 flutter run
 ```
 
-### Nota
-
-Caso seja usuário Windows, basta executar o arquivo ```start.bat``` que o Docker será montado e executado automaticamente.
-
 ## 🚀 Rodar o projeto com Docker
 
 ```bash
@@ -43,6 +39,7 @@ docker-compose up -d
 # Acesse pelo navegador
 http://127.0.0.1:9000
 ```
+
 ### Nota
 
 Por questão de praticidade, o projeto Docker está configurado para implementar o projeto web do app, mas o app também vai funcionar normalmente quando implantado em Android/iOS.

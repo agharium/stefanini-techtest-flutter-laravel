@@ -21,11 +21,17 @@ class _ListCellWidgetState extends State<ListCellWidget> {
     return ListTile(
       title: Padding(
         padding: const EdgeInsets.all(4),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        child: Column(
+          // mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(widget.item.title),
-            Text(widget.item.subtitle),
+            Text(
+              widget.item.subtitle,
+              style: TextStyle(
+                color: Colors.grey
+              ),
+            ),
           ],
         ),
       ),
