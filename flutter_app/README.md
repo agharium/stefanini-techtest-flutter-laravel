@@ -42,7 +42,7 @@ http://127.0.0.1:9000
 
 ### Nota
 
-Por questão de praticidade, o projeto Docker está configurado para implementar o projeto web do app, mas o app também vai funcionar normalmente quando implantado em Android/iOS.
+Por questão de praticidade, o projeto Docker está configurado para implementar o projeto web do app, mas o app também deve funcionar normalmente quando implantado em Android/iOS.
 
 ## 📸 Telas
 
