@@ -31,7 +31,7 @@ flutter run
 
 Caso seja usuário Windows, basta executar o arquivo ```start.bat``` que o Docker será montado e executado automaticamente.
 
-## 🚀 Rodar o projeto web com Docker
+## 🚀 Rodar o projeto com Docker
 
 ```bash
 # Construa a imagem docker
@@ -43,22 +43,24 @@ docker-compose up -d
 # Acesse pelo navegador
 http://127.0.0.1:9000
 ```
+### Nota
+
+Por questão de praticidade, o projeto Docker está configurado para implementar o projeto web do app, mas o app também vai funcionar normalmente quando implantado em Android/iOS.
 
 ## 📸 Telas
 
 #### Listagem de usuários
 
-<img src="https://github.com/user-attachments/assets/031f5716-1a1e-4344-b515-2a5417fe43f9" width="300"/>
+<img src="https://github.com/user-attachments/assets/d7681744-4925-40be-ada6-5df0f22ed614" width="300"/>
 
 #### Formulário de cadastro
 
-<img src="https://github.com/user-attachments/assets/40f41fb7-0e5d-47c3-8c7c-9d0f03331104" width="300"/>
-<img src="https://github.com/user-attachments/assets/304d8077-4f15-4336-b156-4e061c4c122b" width="300"/>
+<img src="https://github.com/user-attachments/assets/9763e4a0-0cc6-4c15-90f6-e1f5b8bfc2bf" width="300"/>
+<img src="https://github.com/user-attachments/assets/50abbeb7-696d-47c5-b66d-d252fa144baf" width="300"/>
 
 #### Tela de detalhes
 
-<img src="https://github.com/user-attachments/assets/eade328d-b466-46d5-8c98-6197260f37cf" width="300"/>
-
+<img src="https://github.com/user-attachments/assets/d379b0a8-a591-46b1-ae6b-307fc8c7cdd3" width="300"/>
 
 ## 🧑 Autor
 
