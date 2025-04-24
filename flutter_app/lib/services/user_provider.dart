@@ -13,12 +13,15 @@ class UserProvider extends ChangeNotifier {
   bool get loading => _loading;
   String? get error => _error;
 
-  final String _baseUrl = 'http://localhost:8000/api/users';
+  final String _baseUrl = 'http://10.0.2.2:8000/api/users';
 
   Future<void> fetchUsers() async {
     _loading = true;
     _error = null;
-    notifyListeners();
+    
+    Future.delayed(Duration.zero, () async {
+      notifyListeners();
+    });
 
     try {
       final response = await http.get(Uri.parse(_baseUrl));
