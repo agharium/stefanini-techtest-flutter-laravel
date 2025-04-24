@@ -34,11 +34,21 @@ class _AddUserViewState extends State<AddUserView> {
 
     try {
       await Provider.of<UserProvider>(context, listen: false).createUser(user);
-      Navigator.pop(context, true); // Retorna true para indicar sucesso
+      if (mounted) {
+        Navigator.pop(context, true);
+      } else {
+        debugPrint('Widget desmontado antes de navegar de volta.');
+      }
     } catch (e) {
-      ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text('Erro ao salvar usuário')),
-      );
+      debugPrint('Erro ao salvar usuário: $e');
+
+      if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(content: Text('Erro ao salvar usuário')),
+        );
+      } else {
+        debugPrint('Widget desmontado antes de exibir a mensagem de erro.');
+      }
     } finally {
       setState(() => isSaving = false);
     }
@@ -65,15 +75,11 @@ class _AddUserViewState extends State<AddUserView> {
                   MinimalTextInput(
                     label: "Nome",
                     controller: nameController,
-                    // validator: (value) =>
-                    //     value == null || value.isEmpty ? 'Informe o nome' : null,
                   ),
                   MinimalTextInput(
                     label: "E-mail",
                     controller: emailController,
                     keyboardType: TextInputType.emailAddress,
-                    // validator: (value) =>
-                    //     value == null || !value.contains('@') ? 'E-mail inválido' : null,
                   ),
                   MinimalTextInput(
                     label: "Telefone",
@@ -82,29 +88,22 @@ class _AddUserViewState extends State<AddUserView> {
                   ),
                 ],
               ),
-              SizedBox(
-                width: double.infinity,
-                height: 50,
-                child: ElevatedButton(
-                  onPressed: isSaving ? null : _saveUser,
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.black, // fundo preto
-                    foregroundColor: Colors.white, // texto branco
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(6), // opcional, borda arredondada
-                    ),
+              ElevatedButton(
+                onPressed: isSaving ? null : _saveUser,
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.black,
+                  foregroundColor: Colors.white,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(6),
                   ),
-                  child: isSaving
-                      ? const SizedBox(
-                          width: 16,
-                          height: 16,
-                          child: CircularProgressIndicator(
-                            strokeWidth: 2,
-                            valueColor: AlwaysStoppedAnimation<Color>(Colors.white),
-                          ),
-                        )
-                      : const Text("Salvar"),
+                  minimumSize: Size(double.infinity, 50)
                 ),
+                child: isSaving
+                  ? const CircularProgressIndicator(
+                    strokeWidth: 1.5,
+                    valueColor: AlwaysStoppedAnimation<Color>(Colors.white),
+                  )
+                  : const Text("Salvar"),
               )
             ],
           ),
