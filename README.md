@@ -21,7 +21,7 @@ Uma collection Postman já está pronta para facilitar seus testes com a API. Ba
 
 ### Nota
 
-Caso seja usuário Windows, basta executar o arquivo ```start.bat``` para montar e executar automaticamente a configuração Docker completa.
+Caso seja usuário Windows, basta iniciar serviço Docker e em seguida executar o arquivo ```start.bat``` para montar e executar automaticamente a configuração Docker completa da aplicação.
 
 ## 🧑 Autor
 
